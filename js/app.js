@@ -1,8 +1,4 @@
-let num = 0;
-if (num === +-1) 
-{
-    console.log(num);
-}
+
 
 //grant access to 18 and older. Deny 18 and under
 let users = 18; 
