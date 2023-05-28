@@ -60,3 +60,11 @@ console.log(dart);
 wolfy.splice(0,1, 'Gameboy');
 console.log(wolfy);
 
+//Yell at the ninja turtles
+const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+
+
+for(let t = 0; t < ninjaTurtles.length; t++) {
+    ninjaTurtles[t] = ninjaTurtles[t].toUpperCase();
+    console.log(ninjaTurtles[t]);
+}
