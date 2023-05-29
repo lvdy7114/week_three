@@ -209,3 +209,21 @@ console.log(whereIsWaldo);
 
 //Access and console.log "Waldo".
 console.log(whereIsWaldo[3][1][1]);
+
+/*
+Excited Kitten
+*/
+//1. Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+//2. For every even number in your loop, log "...human... why you taking pictures of me...?", 
+//"...the catnip made me do it...", or "...why does the red dot always get away...?" at random.
+
+let randomSayings = ['...human... why you taking pictures of me...?', '...the catnip made me do it...',
+'...why does the red dot always get away...?']
+
+for (let counter = 1; counter <= 20; counter++) {
+    if (counter % 2 === 0) {
+        console.log(randomSayings[(Math.floor(Math.random() * randomSayings.length))]);
+    
+console.log("Love me, pet me! HSSSSSS!");
+    }
+}
