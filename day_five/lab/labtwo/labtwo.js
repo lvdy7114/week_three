@@ -186,3 +186,26 @@ console.log(favMovies);
 //After running the above tasks, console.log the index of "Fast and Furious."
 let fastAndFuriousIndex = favMovies.indexOf('Fast and Furious');
 console.log(fastAndFuriousIndex);
+
+/*
+Where is Waldo
+*/
+//multi-dimensional array:
+//Remove Eggbert (hint look at the slice/splice methods).
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                      ["Lucinda", "Jacc", "Neff", "Snoop"],
+                      ["Petunia", ["Baked Goods", "Waldo"]]];
+
+console.log(whereIsWaldo.indexOf('Eggbert'));
+//index of 1
+
+whereIsWaldo.splice(1,1,1);
+console.log(whereIsWaldo);
+//Eggbert removed. 
+
+//Change "Neff" to "No One".
+whereIsWaldo.splice(1,2,1, ['Lucinda', 'Jacc', 'No One', 'Snoop']);
+console.log(whereIsWaldo);
+
+//Access and console.log "Waldo".
+console.log(whereIsWaldo[3][1][1]);
