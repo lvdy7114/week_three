@@ -60,11 +60,129 @@ console.log(dart);
 wolfy.splice(0,1, 'Gameboy');
 console.log(wolfy);
 
-//Yell at the ninja turtles
+/*
+Yell at the Ninja Turtles
+*/
+//Capitalize letters in array 
 const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
-
 
 for(let t = 0; t < ninjaTurtles.length; t++) {
     ninjaTurtles[t] = ninjaTurtles[t].toUpperCase();
     console.log(ninjaTurtles[t]);
 }
+
+/*
+Methods Revisted
+*/
+//Do the following and console.log the final results. 
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 
+'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 
+'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 
+'Snatch', 'Fast and Furious'];
+
+//Console log the index of Titanic.  
+let titanicIndex = favMovies.indexOf('Titanic');
+console.log(titanicIndex);
+
+//1. Use the .sort method.
+favMovies.sort();
+console.log(favMovies);
+
+//2. Thought Question: What did this do to the array? 
+//It sorted in alphabetical order.  
+console.log(favMovies);
+//Did it permanently alter it? Yes it did. 
+
+//3. Use the method pop.
+favMovies.pop();
+console.log(favMovies);
+//Removes Volver from the list
+
+//4. push "Guardians of the Galaxy".
+favMovies.push('Guardians of the Galaxy');
+console.log(favMovies);
+//adds Guardians of the Galaxy at the end of array
+
+//5. Reverse the array.
+favMovies.reverse();
+console.log(favMovies);
+
+//6. Use the shift method.
+favMovies.shift();
+console.log(favMovies);
+//Removes Guardians of the Galaxy since it is first on the list
+
+//7. unshift - what does it return?
+favMovies.unshift();
+console.log(favMovies);
+//It returns the same list.  Purpose of unshift is to add to the front of the array. In this case, I didn't add anything. 
+
+//8. splice "Django Unchained" and add "Avatar" 
+//(try finding the index of "Django Unchained" instead of counting it yourself).
+let djangoUnchainedIndex = favMovies.indexOf('Django Unchained');
+console.log(djangoUnchainedIndex);
+//at 14 index
+favMovies.splice(14,1, 'Avatar');
+console.log(favMovies);
+
+//9. Thought Question: Did this permanently alter our array?
+console.log(favMovies);
+//Yes
+
+//10. slice the last half of the array. 
+//(Challenge yourself and try to programatically determine the middle of the array rather than counting it 
+//and hard coding it.)
+const theMiddle = Math.floor(favMovies.length / 2);
+const middleValue = favMovies[theMiddle];
+console.log(middleValue);
+
+let howlsMovingCastleIndex = favMovies.indexOf('Howl\'s Moving Castle');
+console.log(howlsMovingCastleIndex);
+//Howl's Moving Castle is at index 9. 
+
+
+let blackPantherIndex = favMovies.indexOf('Black Panther');
+console.log(blackPantherIndex);
+//black panther index at 17
+
+let middleMovies = favMovies.slice(9,18);
+console.log(middleMovies);    
+
+//Thought Question: Did this permanently alter our array?
+console.log(favMovies);
+//No. because I set a variable of middleMovies to slice and show from the list Howl's Moving Castle to Black Panther
+
+//Store the value of your slice in a variable and console.log it.
+let sliceMovies = middleMovies;
+console.log(sliceMovies);
+
+//13. Thought Question: What is going on here?
+//I re-assigned the sliceMovies variable of the slice method and put it in console.log of that variable.  
+
+//14. console.log your final results.
+console.log(favMovies);
+/* 
+[
+  'Toy Story',
+  'Titanic',
+  'The Usual Suspects',
+  'The Fellowship of the Ring',
+  'Snatch',
+  'Seven',
+  'Oculus',
+  'Jaws',
+  'Imitation of Life',
+  "Howl's Moving Castle",
+  'Harry Potter',
+  'Harry Potter',
+  'Fried Green Tomatoes',
+  'Fast and Furious',
+  'Avatar',
+  'Conan the Barbarian',
+  'Cloud Atlas',
+  'Black Panther'
+]
+*/
+//After running the above tasks, console.log the index of "Fast and Furious."
+let fastAndFuriousIndex = favMovies.indexOf('Fast and Furious');
+console.log(fastAndFuriousIndex);
