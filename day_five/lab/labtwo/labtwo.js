@@ -184,8 +184,18 @@ console.log(favMovies);
 ]
 */
 //After running the above tasks, console.log the index of "Fast and Furious."
+favMovies.splice(13,1);
+console.log(favMovies);
+
 let fastAndFuriousIndex = favMovies.indexOf('Fast and Furious');
 console.log(fastAndFuriousIndex);
+//We removed it from the array. 
+//What value do we get when we look for the index of something that is not in the array?
+//Get a value of -1
+//Thought Question: We declared the variable favMovies with const, and yet we were allowed to change the array. Weird? 
+//Should we have used let?
+//No. Things can change in the array, but can't be re-assigned. It defines a constant reference to an array, so elements
+//of a constant array can change. 
 
 /*
 Where is Waldo
@@ -223,8 +233,10 @@ let randomSayings = ['...human... why you taking pictures of me...?', '...the ca
 for (let counter = 1; counter <= 20; counter++) {
     if (counter % 2 === 0) {
         console.log(randomSayings[(Math.floor(Math.random() * randomSayings.length))]);
-    
-console.log("Love me, pet me! HSSSSSS!");
+    }
+    else {
+        
+        console.log("Love me, pet me! HSSSSSS!");
     }
 }
 
@@ -274,3 +286,5 @@ const kristynsCloset = [
       "raybans"
     ]
   ];
+
+  
