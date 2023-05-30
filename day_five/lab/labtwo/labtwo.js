@@ -254,8 +254,6 @@ console.log(midPoint);
 /*
 Hungry For More - optional
 */
-//alien attire - Remove Kristyn's shoe from the array and save it to the variable kristynsShoe.
-//Use that variable to add Kristyn's lost shoe to Thom's accessories array.
 const kristynsCloset = [
     "left shoe",
     "cowboy boots",
@@ -265,6 +263,9 @@ const kristynsCloset = [
     "yellow knit hat",
     "marshmallow peeps"
   ];
+//alien attire - Remove Kristyn's shoe from the array and save it to the variable kristynsShoe.
+  let kristynsShoe = kristynsCloset.splice(0,1);
+  console.log(kristynsShoe);
   
   // Thom's closet is more complicated. Check out this nested data structure!!
   const thomsCloset = [
@@ -287,4 +288,9 @@ const kristynsCloset = [
     ]
   ];
 
+  //Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+console.log(thomsCloset[2][0]); //wool mittens, which is in accessories array
+console.log(thomsCloset[2]); //displays accessories array
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset[2]);
   
